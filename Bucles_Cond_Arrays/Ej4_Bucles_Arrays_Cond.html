@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ejercicios JS – Bucles, Condicionales y Arrays</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Lanzador de ejercicios de JavaScript (bucles, condicionales, arrays) con Tailwind CSS" />
+</head>
+<body class="min-h-screen bg-slate-100 text-slate-800">
+  <!-- Header -->
+  <header class="bg-white/90 backdrop-blur sticky top-0 z-10 shadow">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-xl md:text-2xl font-bold">Ejercicios JavaScript</h1>
+      <span class="text-sm text-slate-500">Bucles · Condicionales · Arrays</span>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-5xl mx-auto px-4 py-8">
+    <p class="mb-6 text-slate-600">Pulsa cualquier botón para ejecutar el ejercicio. Abre la <span class="font-semibold">consola</span> (F12) cuando el enunciado lo indique.</p>
+
+    <!-- Section component -->
+    <section class="space-y-8">
+
+      <!-- A) Condicionales -->
+      <div class="bg-white p-5 rounded-2xl shadow">
+        <h2 class="text-lg font-semibold mb-4">A) Condicionales <span class="text-slate-400 text-base">(if…else)</span></h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <button class="py-2 px-3 rounded-xl bg-blue-600 text-white hover:bg-blue-700" onclick="ex1()">1. Precio del cine</button>
+          <button class="py-2 px-3 rounded-xl bg-blue-600 text-white hover:bg-blue-700" onclick="ex2()">2. Envío gratis</button>
+          <button class="py-2 px-3 rounded-xl bg-blue-600 text-white hover:bg-blue-700" onclick="ex3()">3. Control de acceso</button>
+        </div>
+      </div>
+
+      <!-- B) Switch -->
+      <div class="bg-white p-5 rounded-2xl shadow">
+        <h2 class="text-lg font-semibold mb-4">B) Switch</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <button class="py-2 px-3 rounded-xl bg-emerald-600 text-white hover:bg-emerald-700" onclick="ex4()">4. Menú del día</button>
+          <button class="py-2 px-3 rounded-xl bg-emerald-600 text-white hover:bg-emerald-700" onclick="ex5()">5. Horario por día</button>
+          <button class="py-2 px-3 rounded-xl bg-emerald-600 text-white hover:bg-emerald-700" onclick="ex6()">6. Estación del año</button>
+        </div>
+      </div>
+
+      <!-- C) While -->
+      <div class="bg-white p-5 rounded-2xl shadow">
+        <h2 class="text-lg font-semibold mb-4">C) While</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <button class="py-2 px-3 rounded-xl bg-fuchsia-600 text-white hover:bg-fuchsia-700" onclick="ex7()">7. Hucha</button>
+          <button class="py-2 px-3 rounded-xl bg-fuchsia-600 text-white hover:bg-fuchsia-700" onclick="ex8()">8. PIN</button>
+          <button class="py-2 px-3 rounded-xl bg-fuchsia-600 text-white hover:bg-fuchsia-700" onclick="ex9()">9. Encuesta</button>
+        </div>
+      </div>
+
+      <!-- D) For -->
+      <div class="bg-white p-5 rounded-2xl shadow">
+        <h2 class="text-lg font-semibold mb-4">D) For</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <button class="py-2 px-3 rounded-xl bg-orange-600 text-white hover:bg-orange-700" onclick="ex10()">10. Tabla precios</button>
+          <button class="py-2 px-3 rounded-xl bg-orange-600 text-white hover:bg-orange-700" onclick="ex11()">11. Pasos</button>
+          <button class="py-2 px-3 rounded-xl bg-orange-600 text-white hover:bg-orange-700" onclick="ex12()">12. Media notas</button>
+        </div>
+      </div>
+
+      <!-- E) break / continue -->
+      <div class="bg-white p-5 rounded-2xl shadow">
+        <h2 class="text-lg font-semibold mb-4">E) Control del flujo <span class="text-slate-400 text-base">(break / continue)</span></h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <button class="py-2 px-3 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700" onclick="ex13()">13. Oferta</button>
+          <button class="py-2 px-3 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700" onclick="ex14()">14. Mensajes</button>
+        </div>
+      </div>
+
+      <!-- F) Arrays -->
+      <div class="bg-white p-5 rounded-2xl shadow">
+        <h2 class="text-lg font-semibold mb-4">F) Arrays</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <button class="py-2 px-3 rounded-xl bg-teal-600 text-white hover:bg-teal-700" onclick="ex15()">15. Compras</button>
+          <button class="py-2 px-3 rounded-xl bg-teal-600 text-white hover:bg-teal-700" onclick="ex16()">16. Total precios</button>
+          <button class="py-2 px-3 rounded-xl bg-teal-600 text-white hover:bg-teal-700" onclick="ex17()">17. Buscar producto</button>
+          <button class="py-2 px-3 rounded-xl bg-teal-600 text-white hover:bg-teal-700" onclick="ex18()">18. Stock bajo</button>
+          <button class="py-2 px-3 rounded-xl bg-teal-600 text-white hover:bg-teal-700" onclick="ex19()">19. Lista de tareas</button>
+          <button class="py-2 px-3 rounded-xl bg-teal-600 text-white hover:bg-teal-700" onclick="ex20()">20. Aprobados / Suspensos</button>
+        </div>
+      </div>
+    </section>
+
+    <p class="mt-8 text-xs text-slate-500">Consejo: abre la consola (F12) para ver resultados en algunos ejercicios.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-10 border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 py-6 text-sm text-slate-500">
+      © 2025 · Prácticas de JavaScript para el aula
+    </div>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="ejercicios_bucles_condicionales_arrays.js"></script>
+</body>
+</html>
