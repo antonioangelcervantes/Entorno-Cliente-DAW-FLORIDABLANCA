@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM – Ejercicios 1–15 (Simple)</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 120px;
+        border: 1px solid #000;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DOM – Ejercicios 1–15</h1>
+
+    <!-- 1 -->
+    <section>
+      <h2>1) Cambiar texto de un párrafo</h2>
+      <p id="e1-p">Hola</p>
+      <button id="e1-btn">Cambiar</button>
+    </section>
+
+    <!-- 2 -->
+    <section>
+      <h2>2) Cambiar color de fondo</h2>
+      <div id="e2-box" class="box">Caja</div>
+      <button id="e2-btn">Cambiar color</button>
+    </section>
+
+    <!-- 3 -->
+    <section>
+      <h2>3) Mensaje en consola</h2>
+      <button id="e3-btn">Mostrar</button>
+    </section>
+
+    <!-- 4 -->
+    <section>
+      <h2>4) Añadir a lista</h2>
+      <ul id="e4-lista"></ul>
+      <button id="e4-btn-add">Añadir</button>
+    </section>
+
+    <!-- 5 -->
+    <section>
+      <h2>5) Eliminar último de lista</h2>
+      <ul id="e5-lista">
+        <li>Elemento A</li>
+        <li>Elemento B</li>
+        <li>Elemento C</li>
+      </ul>
+      <button id="e5-btn-del">Eliminar último</button>
+    </section>
+
+    <!-- 6 -->
+    <section>
+      <h2>6) Cambiar imagen al hacer clic</h2>
+      <p>(Coloca img1.jpg e img2.jpg en la misma carpeta)</p>
+      <img id="e6-img" src="img1.jpg" alt="Imagen 1" width="200" />
+    </section>
+
+    <!-- 7 -->
+    <section>
+      <h2>7) Contador de clics</h2>
+      <button id="e7-btn">Clic</button>
+      <span id="e7-out">0</span>
+    </section>
+
+    <!-- 8 -->
+    <section>
+      <h2>8) Mostrar/Ocultar texto</h2>
+      <p id="e8-texto" class="hidden">Texto oculto</p>
+      <button id="e8-mostrar">Mostrar</button>
+      <button id="e8-ocultar">Ocultar</button>
+    </section>
+
+    <!-- 9 -->
+    <section>
+      <h2>9) Intercambiar textos</h2>
+      <p id="e9-a">A</p>
+      <p id="e9-b">B</p>
+      <button id="e9-btn">Intercambiar</button>
+    </section>
+
+    <!-- 10 -->
+    <section>
+      <h2>10) Cambiar tamaño de texto</h2>
+      <p id="e10-p" style="font-size: 16px">Tamaño letiable</p>
+      <button id="e10-inc">A+</button>
+      <button id="e10-dec">A-</button>
+    </section>
+
+    <!-- 12 -->
+    <section>
+      <h2>13) Lista numerada automáticamente</h2>
+      <ol id="e13-lista"></ol>
+      <button id="e13-btn">Añadir nombres</button>
+    </section>
+
+    <!-- 13 -->
+    <section>
+      <h2>14) Contar elementos de una lista</h2>
+      <ul id="e14-lista">
+        <li>Pera</li>
+        <li>Manzana</li>
+        <li>Uva</li>
+      </ul>
+      <button id="e14-btn">Contar</button>
+    </section>
+
+    <!-- 14 -->
+    <section>
+      <h2>15) Cambiar letios párrafos a la vez</h2>
+      <div id="e15-bloque">
+        <p>Texto 1</p>
+        <p>Texto 2</p>
+        <p>Texto 3</p>
+      </div>
+      <button id="e15-btn">Cambiar</button>
+    </section>
+
+    <script src="dom_basicos.js"></script>
+  </body>
+</html>
