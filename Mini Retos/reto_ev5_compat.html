@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reto 5 — Compatibilidad de componentes</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 1rem; }
+    select, button { padding: .4rem .6rem; }
+    p { margin-top: .5rem; }
+  </style>
+</head>
+<body>
+  <h1>Compatibilidad de componentes</h1>
+  <label>CPU:
+    <select id="cpu">
+      <option>--elige--</option>
+      <option>AM4</option>
+      <option>AM5</option>
+      <option>LGA1700</option>
+    </select>
+  </label>
+
+  <label>Placa:
+    <select id="placa">
+      <option>--elige--</option>
+      <option>AM4</option>
+      <option>AM5</option>
+      <option>LGA1700</option>
+    </select>
+  </label>
+
+  <button id="btnComprobar">Comprobar</button>
+  <p id="resultado"></p>
+
+  <script src="reto_ev5_compat.js"></script>
+</body>
+</html>
