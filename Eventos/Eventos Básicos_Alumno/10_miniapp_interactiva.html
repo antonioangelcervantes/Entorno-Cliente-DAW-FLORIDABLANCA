@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio 10 – Miniapp interactiva</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; padding: 2rem; }
+    section { margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; }
+    #btnTema { padding: .4rem .8rem; }
+    #lista li { cursor: pointer; }
+    .error { color: #c00; }
+  </style>
+</head>
+<body>
+  <h1>Ejercicio 10 – Miniapp interactiva</h1>
+
+  <section>
+    <h2>Registro</h2>
+    <form id="registro">
+      <label>Nombre: <input id="nombre" type="text"></label>
+      <label>Email: <input id="correo" type="email"></label>
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="estado"></p>
+  </section>
+
+  <section>
+    <h2>Tema</h2>
+    <button id="btnTema">Cambiar tema</button>
+  </section>
+
+  <section>
+    <h2>Lista interactiva</h2>
+    <input id="nuevoTexto" placeholder="Nuevo elemento">
+    <button id="addItem">Añadir</button>
+    <ul id="lista"></ul>
+    <p><small>(Clic en un elemento para eliminarlo)</small></p>
+  </section>
+
+  <section>
+    <h2>Contador con teclado</h2>
+    <p>Usa las teclas + y - para modificar el contador.</p>
+    <p>Valor: <strong id="contador">0</strong></p>
+  </section>
+
+  <script>
+  
+  </script>
+</body>
+</html>
