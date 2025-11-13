@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clases JS – Versión Alumno (Simplificada)</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 16px; line-height: 1.4; }
+    section { border: 1px solid #ddd; padding: 10px; margin: 12px 0; }
+    h1 { margin: 0 0 10px 0; }
+    h2 { margin: 0 0 8px 0; font-size: 1rem; }
+    label { display: inline-block; margin: 4px 8px 4px 0; }
+    input { padding: 4px; }
+    button { padding: 6px 10px; margin: 4px 4px 4px 0; }
+    .salida { border: 1px dashed #bbb; padding: 8px; min-height: 36px; white-space: pre-wrap; }
+    .nota { color: #555; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>Clases JS – Versión Alumno (Simplificada)</h1>
+  <p class="nota">Completa los <strong>// TODO</strong> del archivo <code>clases_alumno_simple.js</code> y usa los botones para probar. Sin funciones flecha. Usa <code>let</code> y <code>const</code>.</p>
+
+  <!-- E1) Contador básico -->
+  <section>
+    <h2>1) Contador básico</h2>
+    <label>Valor inicial <input id="e1-valor" type="number" value="0"></label>
+    <div>
+      <button id="e1-crear">Crear contador</button>
+      <button id="e1-inc">+ Incrementar</button>
+      <button id="e1-dec">– Decrementar</button>
+      <button id="e1-reset">Reset</button>
+    </div>
+    <div class="salida" id="e1-out"></div>
+  </section>
+
+  <!-- E2) Producto con IVA fijo (21%) -->
+  <section>
+    <h2>2) Producto con IVA (21%)</h2>
+    <label>Nombre <input id="e2-nombre" type="text" value="Teclado"></label>
+    <label>Precio base (€) <input id="e2-precio" type="number" value="20" min="0" step="0.01"></label>
+    <div>
+      <button id="e2-calcular">Calcular precio final</button>
+      <button id="e2-limpiar">Limpiar</button>
+    </div>
+    <div class="salida" id="e2-out"></div>
+  </section>
+
+  <!-- E3) Alumno con dos notas -->
+  <section>
+    <h2>3) Alumno: media de dos notas</h2>
+    <label>Nombre <input id="e3-nombre" type="text" value="Ana"></label>
+    <label>Nota 1 <input id="e3-n1" type="number" min="0" max="10" step="0.1" value="7"></label>
+    <label>Nota 2 <input id="e3-n2" type="number" min="0" max="10" step="0.1" value="8"></label>
+    <div>
+      <button id="e3-calcular">Calcular media</button>
+      <button id="e3-reset">Reset</button>
+    </div>
+    <div class="salida" id="e3-out"></div>
+  </section>
+
+  <!-- E4) Termómetro: C ↔ F -->
+  <section>
+    <h2>4) Termómetro: Celsius ↔ Fahrenheit</h2>
+    <label>Valor <input id="e4-valor" type="number" step="0.1" value="0"></label>
+    <div>
+      <button id="e4-aF">C → F</button>
+      <button id="e4-aC">F → C</button>
+      <button id="e4-limpiar">Limpiar</button>
+    </div>
+    <div class="salida" id="e4-out"></div>
+  </section>
+
+  <script src="clases_alumno_simple.js"></script>
+</body>
+</html>
