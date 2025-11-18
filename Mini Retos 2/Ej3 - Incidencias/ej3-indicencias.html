@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Incidencias Técnicas</title>
+    <link rel="stylesheet" href="ej3-incidencias.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de Incidencias Técnicas</h1>
+        <p class="subtitulo">
+            Registra incidencias de usuarios, márcalas como resueltas y controla cuántas siguen abiertas.
+        </p>
+    </header>
+
+    <main>
+        <section class="panel">
+            <h2>Nueva incidencia</h2>
+            <form id="formIncidencia">
+                <div class="campo-form">
+                    <label for="tituloIncidencia">Título:</label>
+                    <input type="text" id="tituloIncidencia" name="tituloIncidencia" placeholder="Ej: El PC no enciende">
+                    <p class="error" id="errTituloIncidencia"></p>
+                </div>
+
+                <div class="campo-form">
+                    <label for="descIncidencia">Descripción:</label>
+                    <textarea id="descIncidencia" name="descIncidencia" rows="3" placeholder="Describe brevemente el problema"></textarea>
+                    <p class="error" id="errDescIncidencia"></p>
+                </div>
+
+                <button type="submit" id="btnCrearIncidencia">Crear incidencia</button>
+            </form>
+
+            <p class="mensaje-ok" id="msgOkIncidencia"></p>
+        </section>
+
+        <section class="panel">
+            <h2>Listado de incidencias</h2>
+
+            <div class="acciones-listado">
+                <span id="contadorAbiertas" class="contador-abiertas">Incidencias abiertas: 0</span>
+            </div>
+
+            <ul id="listaIncidencias" class="lista-incidencias">
+                <!-- Elementos <li> generados con JavaScript -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Ejercicio 3 · Panel de Incidencias Técnicas · Repaso Examen JavaScript</p>
+    </footer>
+
+    <!-- El alumnado debe crear y enlazar este archivo -->
+    <!-- <script src="ej3-incidencias.js"></script> -->
+</body>
+</html>

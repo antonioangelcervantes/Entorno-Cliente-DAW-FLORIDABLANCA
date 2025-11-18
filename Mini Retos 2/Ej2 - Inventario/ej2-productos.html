@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor de Productos - Inventario</title>
+    <link rel="stylesheet" href="ej2-productos.css">
+</head>
+<body>
+    <header>
+        <h1>Gestor de Productos · Inventario</h1>
+        <p class="subtitulo">
+            Añade productos al inventario y calcula el valor total usando JavaScript.
+        </p>
+    </header>
+
+    <main>
+        <section class="panel">
+            <h2>Nuevo producto</h2>
+            <form id="formProducto">
+                <div class="campo-form">
+                    <label for="nombreProducto">Nombre del producto:</label>
+                    <input type="text" id="nombreProducto" name="nombreProducto" placeholder="Ej: Ratón inalámbrico">
+                    <p class="error" id="errNombreProducto"></p>
+                </div>
+
+                <div class="campo-form">
+                    <label for="precioProducto">Precio unitario (€):</label>
+                    <input type="number" id="precioProducto" name="precioProducto" step="0.01" placeholder="Ej: 19.99">
+                    <p class="error" id="errPrecioProducto"></p>
+                </div>
+
+                <div class="campo-form">
+                    <label for="cantidadProducto">Cantidad:</label>
+                    <input type="number" id="cantidadProducto" name="cantidadProducto" placeholder="Ej: 5">
+                    <p class="error" id="errCantidadProducto"></p>
+                </div>
+
+                <button type="submit" id="btnAgregarProducto">Agregar producto</button>
+            </form>
+
+            <p class="mensaje-ok" id="msgOkProducto"></p>
+        </section>
+
+        <section class="panel">
+            <h2>Listado de inventario</h2>
+
+            <div class="acciones-listado">
+                <button id="btnMostrarProductos">Mostrar productos</button>
+                <button id="btnCalcularTotal">Calcular valor total</button>
+                <span id="valorTotal" class="total-inventario">Valor total: 0 €</span>
+            </div>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Precio unitario (€)</th>
+                            <th>Cantidad</th>
+                            <th>Total producto (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaProductos">
+                        <!-- Filas generadas con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Ejercicio 2 · Gestor de Productos / Inventario · Repaso Examen JavaScript</p>
+    </footer>
+
+    <!-- El alumnado debe crear este archivo y enlazarlo -->
+    <!-- <script src="ej2-productos.js"></script> -->
+</body>
+</html>

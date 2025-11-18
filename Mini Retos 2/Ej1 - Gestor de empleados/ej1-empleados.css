@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #222;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+}
+
+.panel {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.08);
+}
+
+.panel h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.campo-form {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 6px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+}
+
+button {
+    margin-top: 8px;
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: none;
+    background-color: #0077cc;
+    color: white;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005fa0;
+}
+
+.error {
+    color: #c0392b;
+    font-size: 0.8rem;
+    min-height: 14px;
+}
+
+.mensaje-ok {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #27ae60;
+    min-height: 16px;
+}
+
+.acciones-listado {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.total-empleados {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+thead {
+    background-color: #f0f0f0;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.8rem;
+    color: #666;
+}

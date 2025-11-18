@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo Interactivo</title>
+    <link rel="stylesheet" href="ej5-catalogo.css">
+</head>
+<body>
+    <header>
+        <h1>Catálogo Interactivo</h1>
+        <p class="subtitulo">
+            Filtra productos por categoría y busca por nombre en tiempo real.
+        </p>
+    </header>
+
+    <main>
+        <section class="panel panel-filtros">
+            <h2>Filtros</h2>
+            <div class="fila-filtro">
+                <label for="buscadorNombre">Buscar por nombre:</label>
+                <input type="text" id="buscadorNombre" placeholder="Ej: teclado, monitor...">
+            </div>
+
+            <div class="fila-filtro">
+                <label for="selectCategoria">Categoría:</label>
+                <select id="selectCategoria">
+                    <option value="todos">Todas</option>
+                    <option value="periferico">Periférico</option>
+                    <option value="almacenamiento">Almacenamiento</option>
+                    <option value="pantalla">Pantalla</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="fila-filtro">
+                <label>
+                    <input type="checkbox" id="checkSoloStock">
+                    Mostrar solo productos con stock
+                </label>
+            </div>
+        </section>
+
+        <section class="panel panel-listado">
+            <h2>Productos</h2>
+            <div id="contenedorTarjetas" class="contenedor-tarjetas">
+                <!-- Tarjetas de producto generadas con JavaScript -->
+            </div>
+            <p id="mensajeSinResultados" class="sin-resultados">
+                No se han encontrado productos con los filtros seleccionados.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Ejercicio 5 · Catálogo Interactivo · Repaso Examen JavaScript</p>
+    </footer>
+
+    <!-- El alumnado debe crear y enlazar este archivo -->
+    <!-- <script src="ej5-catalogo.js"></script> -->
+</body>
+</html>

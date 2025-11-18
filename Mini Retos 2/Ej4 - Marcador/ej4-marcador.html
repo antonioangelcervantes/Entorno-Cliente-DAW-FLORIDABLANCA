@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Marcador Interactivo de Partido</title>
+    <link rel="stylesheet" href="ej4-marcador.css">
+</head>
+<body>
+    <header>
+        <h1>Marcador Interactivo</h1>
+        <p class="subtitulo">
+            Controla la puntuación de dos equipos usando botones y atajos de teclado.
+        </p>
+    </header>
+
+    <main>
+        <section class="panel panel-marcador">
+            <div class="equipo" id="equipoA">
+                <h2>Equipo A</h2>
+                <p class="puntos" id="puntosA">0</p>
+                <div class="controles">
+                    <button class="btn-sumar" data-equipo="A" data-suma="1">+1</button>
+                    <button class="btn-sumar" data-equipo="A" data-suma="2">+2</button>
+                    <button class="btn-sumar" data-equipo="A" data-suma="3">+3</button>
+                </div>
+                <p class="atajos">Atajos teclado: Q (+1), W (+2), E (+3)</p>
+            </div>
+
+            <div class="equipo" id="equipoB">
+                <h2>Equipo B</h2>
+                <p class="puntos" id="puntosB">0</p>
+                <div class="controles">
+                    <button class="btn-sumar" data-equipo="B" data-suma="1">+1</button>
+                    <button class="btn-sumar" data-equipo="B" data-suma="2">+2</button>
+                    <button class="btn-sumar" data-equipo="B" data-suma="3">+3</button>
+                </div>
+                <p class="atajos">Atajos teclado: I (+1), O (+2), P (+3)</p>
+            </div>
+        </section>
+
+        <section class="panel panel-extra">
+            <h2>Controles generales</h2>
+            <div class="acciones-generales">
+                <button id="btnReiniciar">Reiniciar marcador</button>
+                <button id="btnDeshacer">Deshacer última acción</button>
+            </div>
+            <p id="mensajeInfo" class="mensaje-info">
+                Usa los botones o los atajos del teclado para cambiar el marcador.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Ejercicio 4 · Marcador Interactivo · Repaso Examen JavaScript</p>
+    </footer>
+
+    <!-- El alumnado debe crear y enlazar este archivo -->
+    <!-- <script src="ej4-marcador.js"></script> -->
+</body>
+</html>

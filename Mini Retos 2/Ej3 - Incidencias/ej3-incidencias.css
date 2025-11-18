@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #222;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+}
+
+.panel {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.08);
+}
+
+.panel h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.campo-form {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+textarea {
+    padding: 6px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    margin-top: 8px;
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: none;
+    background-color: #0077cc;
+    color: white;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005fa0;
+}
+
+.error {
+    color: #c0392b;
+    font-size: 0.8rem;
+    min-height: 14px;
+}
+
+.mensaje-ok {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #27ae60;
+    min-height: 16px;
+}
+
+.acciones-listado {
+    margin-bottom: 10px;
+}
+
+.contador-abiertas {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.lista-incidencias {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-incidencia {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #fafafa;
+}
+
+.item-incidencia h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.item-incidencia p {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.badge-estado {
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+
+.estado-abierta {
+    background-color: #ffe6e6;
+    color: #c0392b;
+}
+
+.estado-resuelta {
+    background-color: #e6ffea;
+    color: #27ae60;
+}
+
+.acciones-incidencia {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-peque {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+}
+
+.btn-resuelta {
+    background-color: #27ae60;
+}
+
+.btn-resuelta:hover {
+    background-color: #1f8e4c;
+}
+
+.btn-eliminar {
+    background-color: #c0392b;
+}
+
+.btn-eliminar:hover {
+    background-color: #992d22;
+}
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.8rem;
+    color: #666;
+}
