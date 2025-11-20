@@ -1,76 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Gestor de Empleados</title>
-    <link rel="stylesheet" href="ej1-empleados.css">
-</head>
-<body>
+    <link rel="stylesheet" href="ej1-empleados.css" />
+  </head>
+  <body>
     <header>
-        <h1>Gestor de Empleados</h1>
-        <p class="subtitulo">
-            Completa el formulario para registrar empleados y muestra el listado en la tabla inferior usando JavaScript.
-        </p>
+      <h1>Gestor de Empleados</h1>
+      <p class="subtitulo">
+        Completa el formulario para registrar empleados y muestra el listado en
+        la tabla inferior usando JavaScript.
+      </p>
     </header>
 
     <main>
-        <section class="panel">
-            <h2>Nuevo empleado</h2>
-            <form id="formEmpleado">
-                <div class="campo-form">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana López">
-                    <p class="error" id="errNombre"></p>
-                </div>
+      <section class="panel">
+        <h2>Nuevo empleado</h2>
+        <form id="formEmpleado">
+          <div class="campo-form">
+            <label for="nombre">Nombre:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ej: Ana López"
+            />
+            <p class="error" id="errNombre"></p>
+          </div>
 
-                <div class="campo-form">
-                    <label for="puesto">Puesto:</label>
-                    <input type="text" id="puesto" name="puesto" placeholder="Ej: Administrativo">
-                    <p class="error" id="errPuesto"></p>
-                </div>
+          <div class="campo-form">
+            <label for="puesto">Puesto:</label>
+            <input
+              type="text"
+              id="puesto"
+              name="puesto"
+              placeholder="Ej: Administrativo"
+            />
+            <p class="error" id="errPuesto"></p>
+          </div>
 
-                <div class="campo-form">
-                    <label for="salario">Salario (€):</label>
-                    <input type="number" id="salario" name="salario" placeholder="Ej: 1500">
-                    <p class="error" id="errSalario"></p>
-                </div>
+          <div class="campo-form">
+            <label for="salario">Salario (€):</label>
+            <input
+              type="number"
+              id="salario"
+              name="salario"
+              placeholder="Ej: 1500"
+            />
+            <p class="error" id="errSalario"></p>
+          </div>
 
-                <button type="submit" id="btnAgregar">Agregar empleado</button>
-            </form>
+          <button type="submit" id="btnAgregar">Agregar empleado</button>
+        </form>
 
-            <p class="mensaje-ok" id="msgOk"></p>
-        </section>
+        <p class="mensaje-ok" id="msgOk"></p>
+      </section>
 
-        <section class="panel">
-            <h2>Listado de empleados</h2>
+      <section class="panel">
+        <h2>Listado de empleados</h2>
 
-            <div class="acciones-listado">
-                <button id="btnMostrar">Mostrar empleados</button>
-                <span id="totalEmpleados" class="total-empleados">Total empleados: 0</span>
-            </div>
+        <div class="acciones-listado">
+          <button id="btnMostrar">Mostrar empleados</button>
+          <span id="totalEmpleados" class="total-empleados"
+            >Total empleados: 0</span
+          >
+        </div>
 
-            <div class="tabla-contenedor">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Puesto</th>
-                            <th>Salario (€)</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tablaEmpleados">
-                        <!-- Aquí se añadirán las filas con JavaScript -->
-                    </tbody>
-                </table>
-            </div>
-        </section>
+        <div class="tabla-contenedor">
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Puesto</th>
+                <th>Salario (€)</th>
+              </tr>
+            </thead>
+            <tbody id="tablaEmpleados">
+              <!-- Aquí se añadirán las filas con JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <p>Ejercicio 1 · Gestor de Empleados · Repaso Examen JavaScript</p>
+      <p>Ejercicio 1 · Gestor de Empleados · Repaso Examen JavaScript</p>
     </footer>
 
     <!-- El alumnado debe crear y enlazar aquí su archivo ej1-empleados.js -->
     <!-- <script src="ej1-empleados.js"></script> -->
-</body>
+  </body>
 </html>
