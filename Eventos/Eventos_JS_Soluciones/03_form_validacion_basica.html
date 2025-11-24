@@ -1,0 +1,46 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio 3 – Validación básica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; padding: 2rem; }
+    label { display:block; margin-bottom:.5rem; }
+    input { padding:.5rem; width: 260px; }
+    .error { color:#c00; margin-top:.5rem; }
+    .ok { color:#070; margin-top:.5rem; }
+  </style>
+</head>
+<body>
+  <h1>Ejercicio 3 – Validación de formulario básica</h1>
+  <form id="form">
+    <label>Nombre de usuario:
+      <input id="usuario" type="text" placeholder="Tu nombre">
+    </label>
+    <button type="submit">Enviar</button>
+  </form>
+  <p id="msg"></p>
+
+  <script>
+    (function(){
+      const form = document.getElementById('form');
+      const usuario = document.getElementById('usuario');
+      const msg = document.getElementById('msg');
+
+      form.addEventListener('submit', function(e){
+        if (usuario.value.trim() === ''){
+          e.preventDefault();
+          msg.textContent = 'El nombre de usuario no puede estar vacío.';
+          msg.className = 'error';
+        } else {
+          e.preventDefault();
+          msg.textContent = 'Formulario correcto. (Simulación de envío)';
+          msg.className = 'ok';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

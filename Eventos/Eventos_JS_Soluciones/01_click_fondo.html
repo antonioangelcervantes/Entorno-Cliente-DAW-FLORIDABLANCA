@@ -1,0 +1,32 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio 1 – Primer clic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; padding: 2rem; }
+    button { padding: .6rem 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Ejercicio 1 – Primer clic</h1>
+  <p>Pulsa el botón para cambiar el color de fondo de la página.</p>
+  <button id="cambiarFondo">Cambiar fondo</button>
+
+  <script>
+    (function(){
+      const btn = document.getElementById('cambiarFondo');
+      function colorAleatorio() {
+        const numero = Math.floor(Math.random() * 0xFFFFFF);
+        const hex = "#" + numero.toString(16).padStart(6, "0");
+        return hex;
+      }
+      btn.addEventListener('click', function(){
+        document.body.style.backgroundColor = colorAleatorio();
+      });
+    })();
+  </script>
+</body>
+</html>

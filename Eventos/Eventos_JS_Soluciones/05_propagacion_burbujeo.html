@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ejercicio 5 – Propagación y burbujeo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+        padding: 2rem;
+      }
+      .box {
+        padding: 24px;
+      }
+      #exterior {
+        background: #e6e6e6;
+      }
+      #medio {
+        background: #cccccc;
+      }
+      #interior {
+        background: #b3b3b3;
+      }
+      label {
+        display: block;
+        margin: 1rem 0 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ejercicio 5 – Propagación y burbujeo</h1>
+    <label
+      ><input type="checkbox" id="cortar" /> Detener propagación en el DIV
+      intermedio</label
+    >
+
+    <div id="exterior" class="box">
+      Exterior
+      <div id="medio" class="box">
+        Medio
+        <div id="interior" class="box">Interior</div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const exterior = document.getElementById("exterior");
+        const intermedio = document.getElementById("medio");
+        const interior = document.getElementById("interior");
+        const cortar = document.getElementById("cortar");
+
+        function registrar(mensaje) {
+          alert(mensaje);
+        }
+
+        exterior.addEventListener("click", function () {
+          registrar("Clic en EXTERIOR");
+        });
+        intermedio.addEventListener("click", function (evento) {
+          if (cortar.checked) {
+            evento.stopPropagation();
+          }
+          registrar("Clic en INTERMEDIO");
+        });
+        interior.addEventListener("click", function () {
+          registrar("Clic en INTERIOR");
+        });
+      })();
+    </script>
+  </body>
+</html>

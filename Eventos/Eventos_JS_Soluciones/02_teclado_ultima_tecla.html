@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ejercicio 2 – Captura de teclado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+        padding: 2rem;
+      }
+      input {
+        padding: 0.5rem;
+        width: 280px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ejercicio 2 – Captura de teclado</h1>
+    <input id="tecla" placeholder="Escribe y pulsa teclas" />
+    <p>Última tecla: <strong id="ultimo">—</strong></p>
+
+    <script>
+      (function () {
+        const campo = document.getElementById("tecla");
+        const ultimo = document.getElementById("ultimo");
+        campo.addEventListener("keydown", function (event) {
+          ultimo.textContent = event.key;
+        });
+      })();
+    </script>
+  </body>
+</html>

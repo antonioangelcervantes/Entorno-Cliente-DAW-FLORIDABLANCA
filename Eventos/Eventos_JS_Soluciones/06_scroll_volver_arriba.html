@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ejercicio 6 – Scroll y volver arriba</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+        line-height: 1.6;
+        margin: 0;
+      }
+      main {
+        padding: 2rem;
+      }
+      #arriba {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        padding: 0.6rem 0.9rem;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Ejercicio 6 – Scroll y botón volver arriba</h1>
+      <p>Desplázate para que aparezca el botón.</p>
+      <div id="relleno"></div>
+    </main>
+    <button id="arriba" title="Volver arriba">↑ Arriba</button>
+
+    <script>
+      (function () {
+        const arriba = document.getElementById("arriba");
+        const relleno = document.getElementById("relleno");
+        var texto = "";
+        for (let i = 0; i < 120; i++) {
+          texto += "<p>Línea " + (i + 1) + " de contenido de ejemplo.</p>";
+        }
+        relleno.innerHTML = texto;
+
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 300) {
+            arriba.style.display = "block";
+          } else {
+            arriba.style.display = "none";
+          }
+        });
+        arriba.addEventListener("click", function () {
+          window.scrollTo(0, 0);
+        });
+      })();
+    </script>
+  </body>
+</html>
