@@ -1,0 +1,231 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6fa;
+  color: #333;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.descripcion {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.seccion {
+  margin-top: 25px;
+}
+
+.seccion h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.nota {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* CARTA DEL BAR */
+
+.lista-productos {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.tarjeta-producto {
+  border: 1px solid #dde3f0;
+  border-radius: 6px;
+  padding: 10px 12px;
+  background-color: #fcfdff;
+}
+
+.tarjeta-producto h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+
+.precio-producto {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.btn-add {
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  border: 1px solid #2b6cb0;
+  background-color: #2b6cb0;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-add:hover {
+  background-color: #245792;
+}
+
+/* CARRITO */
+
+.estado-pedido {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#textoEstado {
+  text-transform: uppercase;
+}
+
+.lista-carrito {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.linea-carrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 4px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.linea-info {
+  flex: 1;
+}
+
+.linea-nombre {
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.linea-detalle {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.linea-controles {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.btn-cantidad {
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #999;
+  background-color: #eee;
+}
+
+.btn-cantidad:hover {
+  background-color: #ddd;
+}
+
+.cantidad {
+  min-width: 20px;
+  text-align: center;
+}
+
+/* TOTAL Y BOTONES INFERIORES */
+
+.total-pedido {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.acciones-pedido {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.btn-principal,
+.btn-secundario {
+  padding: 7px 14px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-principal {
+  border: 1px solid #2b6cb0;
+  background-color: #2b6cb0;
+  color: #ffffff;
+}
+
+.btn-principal:hover {
+  background-color: #245792;
+}
+
+.btn-secundario {
+  border: 1px solid #a0aec0;
+  background-color: #e2e8f0;
+  color: #2d3748;
+}
+
+.btn-secundario:hover {
+  background-color: #cbd5e0;
+}
+
+/* MENSAJE INFO */
+
+.mensaje-info {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* ESTADOS VISUALES DEL PEDIDO */
+
+.pedido-confirmado {
+  color: #38a169;
+}
+
+.pedido-abierto {
+  color: #d69e2e;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  .linea-carrito {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .acciones-pedido {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

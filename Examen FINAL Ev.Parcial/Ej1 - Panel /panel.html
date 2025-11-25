@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio 1 - Panel de participación</title>
+    <link rel="stylesheet" href="panel.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Ejercicio 1 - Panel de participación</h1>
+        <p class="descripcion">
+          Completa el archivo <code>panel.js</code> para gestionar la
+          participación de los alumnos usando clases, objetos y eventos.
+        </p>
+      </header>
+
+      <section class="controles">
+        <div class="campo">
+          <label for="selectAlumno">Selecciona un alumno:</label>
+          <select id="selectAlumno">
+            <option value="Ana">Ana</option>
+            <option value="Luis">Luis</option>
+            <option value="Marta">Marta</option>
+            <option value="Pedro">Pedro</option>
+            <option value="Lucía">Lucía</option>
+          </select>
+        </div>
+
+        <div class="botones">
+          <button id="btnPresente">Sumar participación</button>
+          <button id="btnAusente">Restar participación</button>
+        </div>
+      </section>
+
+      <section class="resumen">
+        <p id="resumenAsistencia">Total intervenciones: 0</p>
+        <p id="mensajeInfo" class="mensaje-info">
+          No se ha registrado ninguna acción todavía.
+        </p>
+        <p class="ayuda-teclado">
+          Atajos de teclado (ejemplo): tecla 1, 2 o 3 para sumar participación a
+          los tres primeros alumnos del selector.
+        </p>
+      </section>
+
+      <section class="tabla-section">
+        <h2>Lista de participación</h2>
+        <table class="tabla-asistencia">
+          <thead>
+            <tr>
+              <th>Nº</th>
+              <th>Alumno</th>
+              <th>Participaciones</th>
+            </tr>
+          </thead>
+          <tbody id="tablaAsistencia">
+            <!-- Las filas se generarán desde JavaScript -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="Soluciones_Profesor/panel.js"></script>
+  </body>
+</html>

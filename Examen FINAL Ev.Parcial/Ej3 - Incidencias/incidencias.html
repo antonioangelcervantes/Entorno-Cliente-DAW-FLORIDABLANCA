@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3 - Gestión de incidencias</title>
+  <link rel="stylesheet" href="incidencias.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Ejercicio 3 - Panel de incidencias del centro</h1>
+      <p class="descripcion">
+        Completa el archivo <code>incidencias.js</code> para gestionar un sistema
+        de incidencias usando clases, arrays, filtros y delegación de eventos.
+      </p>
+    </header>
+
+    <!-- FORMULARIO DE NUEVA INCIDENCIA -->
+    <section class="seccion formulario">
+      <h2>Registrar incidencia</h2>
+
+      <div class="grid-form">
+        <div class="campo">
+          <label for="descripcionIncidencia">Descripción</label>
+          <input type="text" id="descripcionIncidencia" placeholder="Ej: El PC no arranca">
+        </div>
+
+        <div class="campo">
+          <label for="aulaIncidencia">Aula</label>
+          <select id="aulaIncidencia">
+            <option value="">-- Selecciona aula --</option>
+            <option value="Aula 1">Aula 1</option>
+            <option value="Aula 2">Aula 2</option>
+            <option value="Aula de Informática">Aula de Informática</option>
+            <option value="Sala de Profesores">Sala de Profesores</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="tipoIncidencia">Tipo</label>
+          <select id="tipoIncidencia">
+            <option value="Hardware">Hardware</option>
+            <option value="Software">Software</option>
+            <option value="Red">Red</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="btnRegistrarIncidencia" class="btn-principal">
+        Registrar incidencia
+      </button>
+
+      <p class="nota">
+        El estado inicial de todas las incidencias será <strong>abierta</strong>.
+      </p>
+    </section>
+
+    <!-- FILTROS -->
+    <section class="seccion filtros">
+      <h2>Filtros</h2>
+
+      <div class="grid-filtros">
+        <div class="campo">
+          <label for="filtroAula">Filtrar por aula</label>
+          <select id="filtroAula">
+            <option value="todas">Todas</option>
+            <option value="Aula 1">Aula 1</option>
+            <option value="Aula 2">Aula 2</option>
+            <option value="Aula de Informática">Aula de Informática</option>
+            <option value="Sala de Profesores">Sala de Profesores</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="filtroEstado">Filtrar por estado</label>
+          <select id="filtroEstado">
+            <option value="todas">Todas</option>
+            <option value="abierta">Abiertas</option>
+            <option value="en-curso">En curso</option>
+            <option value="resuelta">Resueltas</option>
+          </select>
+        </div>
+      </div>
+
+      <p id="resumenIncidencias" class="resumen">
+        Abiertas: 0 | En curso: 0 | Resueltas: 0
+      </p>
+    </section>
+
+    <!-- LISTADO DE INCIDENCIAS -->
+    <section class="seccion listado">
+      <h2>Listado de incidencias</h2>
+
+      <div id="contenedorIncidencias" class="lista-incidencias">
+        <!-- Las tarjetas se generarán desde JS -->
+      </div>
+
+      <p id="mensajeVacio" class="mensaje-vacio">
+        No hay incidencias registradas.
+      </p>
+    </section>
+  </main>
+
+  <script src="inicidencias.js"></script>
+</body>
+</html>

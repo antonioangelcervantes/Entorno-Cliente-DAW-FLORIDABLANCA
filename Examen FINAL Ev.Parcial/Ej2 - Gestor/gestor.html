@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2 - Gestor de proyectos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Ejercicio 2 - Gestor de proyectos del ciclo</h1>
+      <p class="descripcion">
+        Completa el archivo <code>main.js</code> para gestionar una lista de proyectos
+        usando clases, objetos, arrays y eventos.
+      </p>
+    </header>
+
+    <!-- Formulario de alta de proyectos -->
+    <section class="seccion formulario">
+      <h2>Nuevo proyecto</h2>
+      <div class="grid-form">
+        <div class="campo">
+          <label for="tituloProyecto">Título del proyecto</label>
+          <input type="text" id="tituloProyecto" placeholder="Ej: Gestión de biblioteca">
+        </div>
+
+        <div class="campo">
+          <label for="grupoProyecto">Nombre del grupo</label>
+          <input type="text" id="grupoProyecto" placeholder="Ej: Grupo A">
+        </div>
+
+        <div class="campo">
+          <label for="moduloProyecto">Módulo</label>
+          <select id="moduloProyecto">
+            <option value="">-- Selecciona módulo --</option>
+            <option value="Entorno Cliente">Entorno Cliente</option>
+            <option value="Interfaces">Interfaces</option>
+            <option value="Sistemas">Sistemas</option>
+            <option value="Base de Datos">Base de Datos</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="notaPresentacion">Nota presentación (0-10)</label>
+          <input type="number" id="notaPresentacion" min="0" max="10" step="0.1">
+        </div>
+
+        <div class="campo">
+          <label for="notaTecnica">Nota técnica (0-10)</label>
+          <input type="number" id="notaTecnica" min="0" max="10" step="0.1">
+        </div>
+      </div>
+
+      <button id="btnAgregarProyecto" class="btn-principal">
+        Añadir proyecto
+      </button>
+
+      <p class="nota">
+        Recuerda validar los datos en <code>gestor.js</code> antes de crear el proyecto.
+      </p>
+    </section>
+
+    <!-- Filtros -->
+    <section class="seccion filtros">
+      <h2>Filtros</h2>
+      <div class="filtros-grid">
+        <div class="campo">
+          <label for="filtroModulo">Filtrar por módulo</label>
+          <select id="filtroModulo">
+            <option value="todos">Todos</option>
+            <option value="Entorno Cliente">Entorno Cliente</option>
+            <option value="Interfaces">Interfaces</option>
+            <option value="Sistemas">Sistemas</option>
+            <option value="Base de Datos">Base de Datos</option>
+          </select>
+        </div>
+
+        <div class="campo campo-checkbox">
+          <label>
+            <input type="checkbox" id="filtroSoloAprobados">
+            Mostrar solo proyectos con media &ge; 5
+          </label>
+        </div>
+      </div>
+
+      <p id="resumenProyectos" class="resumen">
+        Proyectos totales: 0 | Aprobados: 0 | Suspensos: 0
+      </p>
+    </section>
+
+    <!-- Listado de proyectos -->
+    <section class="seccion listado">
+      <h2>Listado de proyectos</h2>
+      <div id="contenedorProyectos" class="grid-proyectos">
+        <!-- Las tarjetas de proyectos se generarán desde JavaScript -->
+      </div>
+      <p id="mensajeVacio" class="mensaje-vacio">
+        Todavía no hay proyectos registrados.
+      </p>
+    </section>
+  </main>
+
+  <script src="gestor.js"></script>
+</body>
+</html>

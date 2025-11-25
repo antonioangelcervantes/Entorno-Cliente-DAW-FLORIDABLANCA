@@ -1,0 +1,148 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6fa;
+  color: #333;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.descripcion {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* FORMULARIO */
+.grid-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.campo label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.campo input,
+.campo select {
+  padding: 6px;
+  font-size: 0.95rem;
+}
+
+.btn-principal {
+  margin-top: 15px;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  border: 1px solid #2b6cb0;
+  background-color: #2b6cb0;
+  color: #ffffff;
+  cursor: pointer;
+}
+.btn-principal:hover {
+  background-color: #245792;
+}
+
+/* FILTROS */
+.grid-filtros {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.resumen {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* LISTADO */
+.lista-incidencias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.tarjeta {
+  border: 1px solid #dde3f0;
+  border-radius: 6px;
+  padding: 12px;
+  background-color: #fcfdff;
+}
+
+.tarjeta h3 {
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+
+.detalle {
+  font-size: 0.9rem;
+  margin: 4px 0;
+}
+
+.estado {
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+/* COLORES ESTADO */
+.estado-abierta {
+  color: #d69e2e;
+}
+
+.estado-en-curso {
+  color: #2b6cb0;
+}
+
+.estado-resuelta {
+  color: #38a169;
+}
+
+/* BOTONES DE OPERACIÓN */
+.acciones {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-mini {
+  padding: 5px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #999;
+  background-color: #eee;
+}
+.btn-mini:hover {
+  background-color: #ddd;
+}
+
+.mensaje-vacio {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}

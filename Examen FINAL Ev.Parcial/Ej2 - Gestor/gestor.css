@@ -1,0 +1,174 @@
+/* Reset sencillo */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Contenedor principal */
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.descripcion {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.seccion {
+  margin-top: 25px;
+}
+
+.seccion h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+/* Formulario */
+
+.grid-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.campo input,
+.campo select {
+  padding: 6px 8px;
+  font-size: 0.95rem;
+}
+
+.btn-principal {
+  margin-top: 15px;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  border: 1px solid #2b6cb0;
+  background-color: #2b6cb0;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-principal:hover {
+  background-color: #245792;
+}
+
+.nota {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Filtros */
+
+.filtros-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.campo-checkbox label {
+  font-weight: normal;
+}
+
+.campo-checkbox input {
+  margin-right: 6px;
+}
+
+.resumen {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Listado de proyectos */
+
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.tarjeta-proyecto {
+  border: 1px solid #dde3f0;
+  border-radius: 6px;
+  padding: 10px 12px;
+  background-color: #fafbff;
+}
+
+.tarjeta-proyecto h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+
+.proyecto-detalle {
+  margin: 2px 0;
+  font-size: 0.9rem;
+}
+
+.badge-modulo {
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  border-radius: 10px;
+  background-color: #edf2ff;
+  color: #2b6cb0;
+  margin-left: 4px;
+}
+
+.estado-aprobado {
+  color: #1f9d55;
+  font-weight: bold;
+}
+
+.estado-suspenso {
+  color: #e53e3e;
+  font-weight: bold;
+}
+
+.mensaje-vacio {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .filtros-grid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

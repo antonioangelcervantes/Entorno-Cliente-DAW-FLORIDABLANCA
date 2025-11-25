@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 4 - Gestor de pedidos del bar</title>
+  <link rel="stylesheet" href="pedidos.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Ejercicio 4 - Gestor de pedidos del bar del centro</h1>
+      <p class="descripcion">
+        Completa el archivo <code>pedidos.js</code> para gestionar un pedido del bar
+        usando varias clases, objetos, arrays y eventos.
+      </p>
+    </header>
+
+    <!-- CARTA DEL BAR -->
+    <section class="seccion carta">
+      <h2>Carta del bar</h2>
+      <p class="nota">
+        La lista de productos se generará desde <code>pedidos.js</code> a partir de un array de objetos.
+      </p>
+      <div id="listaProductos" class="lista-productos">
+        <!-- Las tarjetas de productos se crearán con JavaScript -->
+      </div>
+    </section>
+
+    <!-- CARRITO / PEDIDO -->
+    <section class="seccion carrito">
+      <h2>Pedido actual</h2>
+
+      <div id="estadoPedido" class="estado-pedido">
+        Estado del pedido: <span id="textoEstado">abierto</span>
+      </div>
+
+      <ul id="listaCarrito" class="lista-carrito">
+        <!-- Las líneas del pedido se crearán con JavaScript -->
+      </ul>
+
+      <p id="totalPedido" class="total-pedido">
+        Total: 0 € 
+      </p>
+
+      <div class="acciones-pedido">
+        <button id="btnVaciarPedido" class="btn-secundario">
+          Vaciar pedido
+        </button>
+        <button id="btnConfirmarPedido" class="btn-principal">
+          Confirmar pedido
+        </button>
+      </div>
+
+      <p id="mensajeInfo" class="mensaje-info">
+        Puedes añadir productos desde la carta para crear el pedido.
+      </p>
+    </section>
+  </main>
+
+  <script src="pedidos.js"></script>
+</body>
+</html>
