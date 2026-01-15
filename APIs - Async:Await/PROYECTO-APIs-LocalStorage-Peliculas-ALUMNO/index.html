@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎬 Buscador de Películas - Favoritos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-5xl font-bold text-white mb-2">🎬 Cinemax</h1>
+            <p class="text-gray-300">Busca películas y guarda tus favoritas</p>
+        </header>
+
+        <!-- TODO: Agregar clases Tailwind para hacer responsive -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <!-- Sección de Búsqueda -->
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-lg shadow-xl p-6">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">🔍 Buscar Películas</h2>
+                    
+                    <!-- TODO: Mejorar el diseño del formulario -->
+                    <div class="flex gap-2">
+                        <input
+                            type="text"
+                            id="inputPelicula"
+                            placeholder="Ej: Matrix, Inception, Titanic..."
+                            class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        />
+                        <button 
+                            id="btnBuscar"
+                            class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition">
+                            Buscar
+                        </button>
+                    </div>
+
+                    <!-- Resultados de búsqueda -->
+                    <div id="resultados" class="mt-6"></div>
+                </div>
+            </div>
+
+            <!-- Sección de Favoritos -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-xl p-6 sticky top-4">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">⭐ Mis Favoritas</h2>
+                    <div id="favoritos" class="space-y-3">
+                        <!-- TODO: Aquí se mostrarán los favoritos -->
+                        <p class="text-gray-400 text-center py-8">No hay favoritas aún</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
