@@ -39,7 +39,6 @@ Cuando se busque un país, debes mostrar:
 - Población (con formato de miles)
 - Idiomas
 - Región/Continente
-- Moneda
 
 ### 4. **Validaciones**
 

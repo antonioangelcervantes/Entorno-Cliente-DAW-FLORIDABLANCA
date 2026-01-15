@@ -6,22 +6,34 @@
     <title>Buscador de Países - APIs en JS</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div>
-      <h1>🌍 Buscador de Países</h1>
-      <p>Ingresa el nombre de un país para obtener información</p>
+  <body
+    class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 min-h-screen flex justify-center items-center p-5"
+  >
+    <div class="bg-white rounded-2xl shadow-2xl p-10 max-w-2xl w-full">
+      <h1 class="text-4xl font-bold text-center text-gray-800 mb-3">
+        🌍 Buscador de Países
+      </h1>
+      <p class="text-center text-gray-600 mb-8 text-lg">
+        Ingresa el nombre de un país para obtener información
+      </p>
 
-      <div>
+      <div class="flex flex-col sm:flex-row gap-3 mb-8">
         <input
           type="text"
           id="inputPais"
           placeholder="Ej: España, Colombia, Japón..."
+          class="flex-1 px-4 py-3 border-2 border-gray-300 rounded-lg text-base focus:outline-none focus:border-indigo-500 transition-colors"
         />
-        <button id="btnBuscar">Buscar</button>
+        <button
+          id="btnBuscar"
+          class="px-8 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg font-bold cursor-pointer hover:shadow-lg hover:-translate-y-0.5 transition-all active:translate-y-0"
+        >
+          Buscar
+        </button>
       </div>
 
       <!-- Aquí se mostrarán los resultados -->
-      <div id="resultado"></div>
+      <div id="resultado" class="min-h-24"></div>
     </div>
 
     <script src="js/app.js"></script>
