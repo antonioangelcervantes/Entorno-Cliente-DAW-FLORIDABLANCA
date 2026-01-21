@@ -1,0 +1,140 @@
+/* Estilos mínimos (puedes mejorarlos si quieres) */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f7fb;
+  color: #222;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  margin-top: 6px;
+  color: #555;
+}
+
+.panel {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 14px 0 22px;
+}
+
+.btn {
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #1f6feb;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #333;
+}
+
+.estado {
+  margin: 0;
+  padding: 10px 12px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #e6e8ef;
+  flex: 1;
+  min-width: 240px;
+}
+
+.listas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 780px) {
+  .listas {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e6e8ef;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.hint {
+  margin-top: 6px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid #eef0f6;
+  border-radius: 12px;
+}
+
+.item strong {
+  display: block;
+}
+
+.item small {
+  color: #666;
+}
+
+.tag {
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #eef6ff;
+  color: #1f6feb;
+}
+
+.btn-fav {
+  border: 1px solid #d9dce7;
+  background: #fff;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-fav.is-fav {
+  border-color: #ff4d6d;
+  background: #fff0f3;
+}
+
+.footer {
+  margin-top: 18px;
+  color: #666;
+}

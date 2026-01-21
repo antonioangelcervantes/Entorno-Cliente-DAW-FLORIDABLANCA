@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usuarios favoritos (API + LocalStorage)</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Usuarios favoritos</h1>
+        <p class="subtitle">Consumo de API + LocalStorage</p>
+      </header>
+
+      <section class="panel">
+        <button id="btnCargar" class="btn">Cargar usuarios</button>
+        <button id="btnLimpiar" class="btn btn-secondary">
+          Limpiar favoritos
+        </button>
+        <p id="estado" class="estado">Pulsa “Cargar usuarios”.</p>
+      </section>
+
+      <section class="listas">
+        <div class="card">
+          <h2>Lista de usuarios</h2>
+          <ul id="listaUsuarios" class="lista"></ul>
+        </div>
+
+        <div class="card">
+          <h2>Favoritos</h2>
+          <p class="hint">Se marcan automáticamente al recargar.</p>
+          <ul id="listaFavoritos" class="lista"></ul>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <small
+          >API: JSONPlaceholder / LocalStorage: clave
+          <code>favoritos</code></small
+        >
+      </footer>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
