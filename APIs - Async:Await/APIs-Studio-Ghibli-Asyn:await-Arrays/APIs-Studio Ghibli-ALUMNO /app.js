@@ -10,10 +10,10 @@
 // VARIABLES GLOBALES
 // ========================================
 
-let peliculasCargadas = [];
-let peliculasFiltradas = [];
+const peliculasCargadas = [];
+const peliculasFiltradas = [];
 
-const API_URL = 'https://ghibliapi.vercel.app/films';
+const API_URL = "https://ghibliapi.vercel.app/films";
 
 // ========================================
 // FUNCIÓN ASÍNCRONA - CONSUMIR API REAL
@@ -92,15 +92,22 @@ function ordenarPorPuntuacion(peliculas) {
 
 // Inicializa la aplicación y configura los event listeners
 function inicializarApp() {
-  console.log('🎬 Aplicación Studio Ghibli iniciada');
-  
-  // TODO: Configurar event listeners para todos los botones e inputs
-  // - btnCargar -> manejarCargaDatos
-  // - selectDirector -> manejarFiltroDirector
-  // - inputBuscar -> manejarBusqueda
-  // - btnOrdenarAño -> manejarOrdenarAño
-  // - btnOrdenarPuntuacion -> manejarOrdenarPuntuacion
-  // - btnReset -> manejarReset
+  console.log("🎬 Aplicación Studio Ghibli iniciada - SOLUCIÓN");
+  console.log("API URL:", API_URL);
+
+  // Configurar event listeners
+  document.getElementById("btnCargar");
+  document.addEventListener("click", manejarCargaDatos);
+  document.getElementById("selectDirector");
+  document.addEventListener("change", manejarFiltroDirector);
+  document.getElementById("inputBuscar");
+  document.addEventListener("input", manejarBusqueda);
+  document.getElementById("btnOrdenarAño");
+  document.addEventListener("click", manejarOrdenarAño);
+  document.getElementById("btnOrdenarPuntuacion");
+  document.addEventListener("click", manejarOrdenarPuntuacion);
+  document.getElementById("btnReset");
+  document.addEventListener("click", manejarReset);
 }
 
 // Maneja la carga de películas desde la API real
@@ -166,15 +173,23 @@ function mostrarPeliculas(peliculas) {
 
 // Crea el HTML de una tarjeta de película con datos reales de la API
 function crearTarjetaPelicula(pelicula) {
-  // TODO: Crear y retornar HTML usando template literals
-  // Propiedades disponibles: 
-  // - pelicula.title (título)
-  // - pelicula.director (director)
-  // - pelicula.release_date (año)
-  // - pelicula.rt_score (puntuación)
-  // - pelicula.running_time (duración en minutos)
-  // - pelicula.image (URL del póster)
-  // - pelicula.description (sinopsis)
+  return `
+    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden shadow-xl hover:scale-105 transition transform duration-300">
+      <img src="${pelicula.image}" alt="${pelicula.title}" class="w-full h-80 object-cover">
+      <div class="p-4">
+        <h3 class="text-lg font-bold text-white mb-2 line-clamp-1">${pelicula.title}</h3>
+        <p class="text-gray-300 text-sm mb-1">🎬 ${pelicula.director}</p>
+        <p class="text-gray-300 text-sm mb-1">📅 ${pelicula.release_date}</p>
+        <p class="text-gray-300 text-sm mb-2">⏱️ ${pelicula.running_time} min</p>
+        <div class="flex justify-between items-center mt-3 mb-3">
+          <span class="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">
+            ⭐ ${pelicula.rt_score}/100
+          </span>
+        </div>
+        <p class="text-gray-400 text-xs line-clamp-3">${pelicula.description}</p>
+      </div>
+    </div>
+  `;
 }
 
 // Actualiza el panel de estadísticas
@@ -202,4 +217,4 @@ function mostrarEstadoCarga(mensaje, tipo) {
 // INICIAR APLICACIÓN
 // ========================================
 
-document.addEventListener('DOMContentLoaded', inicializarApp);
+document.addEventListener("DOMContentLoaded", inicializarApp);
