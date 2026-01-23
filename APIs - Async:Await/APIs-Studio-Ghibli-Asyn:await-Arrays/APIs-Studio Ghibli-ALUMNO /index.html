@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎬 Studio Ghibli Films</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-black bg-opacity-50 backdrop-blur-md py-6 shadow-2xl sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+      <h1 class="text-5xl font-bold text-white text-center">🎬 Studio Ghibli Films</h1>
+      <p class="text-gray-300 text-center mt-2">Catálogo oficial de películas · API Real</p>
+    </div>
+  </header>
+
+  <div class="container mx-auto px-4 py-8">
+
+    <!-- Panel de Control -->
+    <section class="bg-white rounded-2xl shadow-2xl p-6 mb-8">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">🎮 Panel de Control</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+        
+        <button 
+          id="btnCargar" 
+          class="bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white px-6 py-3 rounded-lg font-semibold shadow-lg transition transform hover:scale-105">
+          📥 Cargar Películas (API Real)
+        </button>
+
+        <select 
+          id="selectDirector" 
+          class="px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-green-500 transition">
+          <option value="">👤 Todos los directores</option>
+          <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+          <option value="Isao Takahata">Isao Takahata</option>
+          <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+          <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+          <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+        </select>
+
+        <input 
+          type="text" 
+          id="inputBuscar" 
+          placeholder="🔍 Buscar por título..." 
+          class="px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-green-500 transition">
+
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <button id="btnOrdenarAño" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm transition">
+          📅 Ordenar por Año
+        </button>
+        <button id="btnOrdenarPuntuacion" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg text-sm transition">
+          ⭐ Ordenar por Puntuación
+        </button>
+        <button id="btnReset" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm transition">
+          🔄 Resetear
+        </button>
+      </div>
+
+      <div id="estadoCarga" class="mt-4 hidden"></div>
+    </section>
+
+    <!-- Grid: Películas + Estadísticas -->
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+
+      <!-- Películas (3/4) -->
+      <div class="lg:col-span-3">
+        <section class="bg-white rounded-2xl shadow-2xl p-6">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold text-gray-800">🎥 Películas</h2>
+            <span id="contadorPeliculas" class="bg-green-100 text-green-800 px-4 py-2 rounded-lg font-semibold">
+              0 películas
+            </span>
+          </div>
+          <div id="listaPeliculas" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+            <p class="col-span-full text-center text-gray-400 py-12">
+              Haz clic en "Cargar Películas" para comenzar
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Estadísticas (1/4) -->
+      <div class="lg:col-span-1">
+        <section class="bg-white rounded-2xl shadow-2xl p-6 sticky top-24">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">📊 Estadísticas</h2>
+          
+          <div class="space-y-4">
+            
+            <div class="bg-gradient-to-r from-green-50 to-green-100 p-4 rounded-xl">
+              <p class="text-gray-600 text-sm font-semibold">Total Películas</p>
+              <p id="statTotal" class="text-4xl font-bold text-green-600">0</p>
+            </div>
+
+            <div class="bg-gradient-to-r from-yellow-50 to-yellow-100 p-4 rounded-xl">
+              <p class="text-gray-600 text-sm font-semibold">⭐ Puntuación Media</p>
+              <p id="statPromedio" class="text-4xl font-bold text-yellow-600">0.0</p>
+              <p class="text-xs text-gray-500 mt-1">(RT Score - calculado con reduce)</p>
+            </div>
+
+          </div>
+
+          <div class="mt-6 pt-6 border-t">
+            <p class="text-xs text-gray-500 text-center">
+              Datos obtenidos de<br>
+              <strong>Studio Ghibli API</strong><br>
+              ghibliapi.vercel.app
+            </p>
+          </div>
+        </section>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
