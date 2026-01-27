@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiniTienda Simple (Offline)</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <header class="top">
+      <h1>MiniTienda Simple</h1>
+      <p>Offline · fetch + async/await · filter · reduce</p>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Buscar productos</h2>
+
+        <label class="field">
+          Texto:
+          <input
+            id="busqueda"
+            type="text"
+            placeholder="Ej: esterilla, mancuernas, bandas elásticas..."
+            autocomplete="off"
+          />
+        </label>
+
+        <div id="lista" class="list">
+          <!-- Aquí se pintan los productos -->
+        </div>
+
+        <div id="total" class="total">
+          <!-- Aquí se pinta el total -->
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

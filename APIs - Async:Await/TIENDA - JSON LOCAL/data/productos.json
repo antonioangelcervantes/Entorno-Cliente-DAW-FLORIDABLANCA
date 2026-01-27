@@ -1,0 +1,10 @@
+{
+  "productos": [
+    { "id": 101, "nombre": "Rueda abdominal", "precio": 20.99 },
+    { "id": 102, "nombre": "Kettlebell 10Kg", "precio": 24.5 },
+    { "id": 103, "nombre": "Bandas Elásticas", "precio": 3.99 },
+    { "id": 104, "nombre": "Guantes de gimnasio", "precio": 10.9 },
+    { "id": 105, "nombre": "Mancuernas 10kg", "precio": 29.99 },
+    { "id": 106, "nombre": "Esterilla fitness", "precio": 12.0 }
+  ]
+}
