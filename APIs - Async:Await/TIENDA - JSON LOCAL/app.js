@@ -80,17 +80,12 @@ function configurarEventos() {
 // =====================================
 
 // 1) Cargar productos desde el JSON local
-cargarProductos().then(function (lista) {
-  // Guardamos los productos en memoria
-  productos = lista;
-
-  // 2) Estado inicial (sin filtro)
+cargarProductos().then(function () {
+// 2) Estado inicial (sin filtro)
   const listaFiltrada = filtrarProductos(productos, "");
   const total = calcularTotal(listaFiltrada);
-
-  // 3) Pintado inicial
+// 3) Pintado inicial
   pintar(listaFiltrada, total);
-
-  // 4) Activar eventos
+// 4) Activar eventos
   configurarEventos();
 });
